@@ -1,0 +1,146 @@
+.frame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 95%;
+  max-width: 100%;
+  padding: 16px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 16px;
+}
+
+
+.status {
+  display: flex;
+  /* flex-wrap: wrap;  */
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.box1,
+.box2,
+.box3,
+.box4,
+.box5,
+.box6 {
+  position: relative;
+  /* width: 160px; */
+  height: auto;
+  gap: 8px;
+  border-radius: 8px;
+  border-width: 1px;
+  padding: 16px;
+  background-color: #ffffff;
+  border: 1px solid #e0e3e5;
+  text-align: flex-end;
+  margin-right: 18px;
+}
+
+.total {
+  font-family: IBM Plex Sans;
+  font-weight: 500;
+  font-size: 14px;
+  color: #606e74;
+}
+
+.value {
+  font-family: IBM Plex Sans;
+  font-weight: 600;
+  font-size: 16px;
+  color: #1a262b;
+}
+
+.frame-icon {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 36px;
+  right: 10px;
+}
+
+.frame2 {
+  width: 100%;
+}
+
+.case-chart {
+  width: 100%;
+  max-width: 1117px;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #e0e3e5;
+}
+
+.graph-frame{
+  margin-top: 20px; /* Adds spacing between status and graph */
+  width: 80%; /* Adjust width based on layout */
+  display: flex;
+  justify-content: center;
+
+}
+.graphFrame {
+  width: 124%;
+  height: auto;
+}
+
+@media (max-width: 1440px) {
+  .frame {
+    padding: 16px;
+  }
+
+  .box1,
+  .box2,
+  .box3,
+  .box4,
+  .box5,
+  .box6 {
+    width: 22%;
+    min-width: 140px;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .box1,
+  .box2,
+  .box3,
+  .box4,
+  .box5,
+  .box6 {
+    width: 30%;
+  }
+}
+
+@media (max-width: 768px) {
+  .status {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .box1,
+  .box2,
+  .box3,
+  .box4,
+  .box5,
+  .box6 {
+    width: 60%;
+  }
+
+  .frame2 {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .box1,
+  .box2,
+  .box3,
+  .box4,
+  .box5,
+  .box6 {
+    width: 70%;
+  }
+}

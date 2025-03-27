@@ -1,0 +1,372 @@
+.Sub_Header {
+  width: 100%; /* Make it full-width */
+  height: 56px; /* Ensure fixed height */
+  display: flex;
+  align-items: center;
+  padding: 12px 24px;
+  border-bottom: 1px solid #e0e3e5;
+  background-color: #ffffff;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Space between icon and text */
+  padding: 10px 16px; /* Equal spacing all around */
+  border-radius: 6px;
+  border: 1px solid #e0e3e5;
+  background-color: #ffffff;
+  cursor: pointer;
+  font-size: 14px;
+font-family: IBM Plex Sans;
+font-weight: 500;
+line-height: 20px;
+letter-spacing: 0%;
+text-align: center;
+color: #606E74;
+
+
+}
+
+.filter-icon {
+  width: 20px; /* Ensure fixed size */
+  height: 20px;
+}
+.reload-icon{
+  width: 20px; /* Ensure fixed size */
+  height: 20px;
+  margin-right: 8px;
+}
+.download-icon{
+  width: 20px; /* Ensure fixed size */
+  height: 20px;
+  margin-right: 8px;
+}
+
+.right_frame {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 555px;
+  flex-wrap: nowrap;
+  
+}
+
+/* Search Input */
+.search {
+  width: 180px;  /* Adjust width as per Figma */
+  height: 22px;  /* Adjust height for consistency */
+  border-radius: 6px;
+  padding: 6px 12px;
+  border: 1px solid #e0e3e5;
+  background-color: #ffffff;
+
+font-family: IBM Plex Sans;
+font-weight: 400;
+font-size: 14px;
+line-height: 20px;
+letter-spacing: 0%;
+color: #1A262B;
+
+
+}
+
+
+/* Dropdown */
+.dropdown {
+  width: 140px; /* Adjust width based on Figma */
+  height: 36px;
+  border-radius: 6px;
+  border: 1px solid #e0e3e5;
+
+  font-family: IBM Plex Sans;
+font-weight: 400;
+font-size: 14px;
+line-height: 20px;
+letter-spacing: 0%;
+color: #1A262B;
+
+}
+
+/* Buttons */
+.submit-btn,
+.reset-btn,
+.download-btn {
+  height: 36px; /* Adjust height to match input fields */
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap; /* Prevents text wrapping */
+}
+
+.submit-btn {
+  width: 70px; 
+  background-color: #796bcc;
+  color: #ffffff;
+  font-family: IBM Plex Sans;
+font-weight: 600;
+font-size: 14px;
+line-height: 20px;
+letter-spacing: 0%;
+text-align: center;
+border: none;
+
+}
+
+.reset-btn {
+  width: 90px;
+  background-color: #ffffff;
+  border: 1px solid #e0e3e5;
+
+  font-family: IBM Plex Sans;
+font-weight: 500;
+font-size: 14px;
+line-height: 20px;
+letter-spacing: 0%;
+text-align: center;
+color: #606E74;
+
+}
+
+.download-btn {
+  width: 120px;
+  background-color: #ffffff;
+  border: 1px solid #e0e3e5;
+
+font-family: IBM Plex Sans;
+font-weight: 500;
+font-size: 14px;
+line-height: 20px;
+letter-spacing: 0%;
+text-align: center;
+color: #606E74;
+
+}
+
+/* Vertical Line */
+.vertical {
+  width: 1px;
+  height: 24px;
+  background: #d1d6d9;
+  margin: 0 12px; /* Adds spacing around the line */
+}
+
+/* "Fuzzy" Text */
+.text {
+  font-size: 14px;
+  color: #606e74;
+  margin: 0;
+
+  font-family: IBM Plex Sans;
+font-weight: 500;
+font-size: 14px;
+line-height: 20px;
+letter-spacing: 0%;
+
+}
+
+/* Toggle Switch */
+.switch {
+  width: 32px;
+  height: 20px;
+  
+}
+
+
+.subheader {
+  width: 100%;
+  padding: 12px 24px;
+  border-bottom: 1px solid #e0e3e5; /* Ensure this stays */
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align left */
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+  
+}
+
+.rectangle943 {
+  width: 3px;
+  height: 52px;
+  border-radius: 2px;
+  background-color: #796bcc;
+  margin-right: 12px;
+}
+.name_title {
+  font-family: IBM Plex Sans;
+  font-weight: 600;
+  font-size: 20px;
+  color: #1a262b;
+  margin: 0; /* Remove extra margins */
+}
+
+.filters {
+  display: flex;
+  align-items: center;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 14px;
+  color: #1a262b;
+  margin-left: 26px;
+  /* padding: 4px 24px;  */
+  background: #ffffff;
+}
+
+.filterIcon {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+}
+
+.filter-label {
+  font-weight: 600;
+  margin-right: 8px;
+}
+
+.filter-item {
+  margin: 0 8px; 
+  color: #555;
+  position: relative;
+}
+
+.filter-item:not(:last-child)::after {
+  content: "|";
+  position: absolute;
+  right: -10px;
+  color: #ccc;
+}
+
+
+
+
+
+.content {
+  width: 729;
+  height: 20;
+  gap: 8px;
+}
+
+@media (max-width: 1440px) {
+  .search {
+    margin-left: 16rem;
+    width: 240px;
+  }
+
+  .right_frame {
+    gap: 8px;
+  }
+
+  .btn, .submit-btn, .reset-btn, .download-btn {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .Sub_Header {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .search {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .right_frame {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .submit-btn, .reset-btn, .download-btn {
+    width: auto;
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  .vertical {
+    display: none;
+  }
+
+  .switch {
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .Sub_Header, .subheader {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    height: auto;
+  }
+
+  .right_frame {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .search, .Dropdown_Input {
+    width: 90%;
+    max-width: 280px;
+  }
+
+  .btn, .submit-btn, .reset-btn, .download-btn {
+    width: 90%;
+    max-width: 300px;
+    font-size: 14px;
+  }
+
+  .switch {
+    margin-top: 5px;
+  }
+
+  .name_title {
+    text-align: center;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .Sub_Header {
+    gap: 8px;
+    padding: 8px;
+  }
+
+  .btn {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .search, .Dropdown_Input {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .submit-btn, .reset-btn, .download-btn {
+    width: 100%;
+    max-width: 250px;
+    font-size: 13px;
+  }
+
+  .name_title {
+    font-size: 16px;
+  }
+
+  .switch {
+    width: 28px;
+    height: 18px;
+  }
+}
+

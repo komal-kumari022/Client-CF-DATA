@@ -1,0 +1,126 @@
+.accordion-container {
+    border: 1px solid #E0E3E5;
+    margin-top: 16px;
+    border-radius: 12px;
+    width: 110%;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    cursor: pointer;
+    background-color: #F8F9FA;
+    font-weight: 600;
+    font-size: 16px;
+    border-bottom: 1px solid #E0E3E5;
+}
+.accordion-content{
+   padding: 14px 0px 32px 0px;
+
+}
+
+.accordion-icon {
+    transition: transform 0.3s ease;
+}
+
+.accordion-icon.open {
+    transform: rotate(180deg);
+}
+
+/* Grid Layout */
+.case-details-grid {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+}
+
+/* Each row contains 4 columns */
+.case-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0px; 
+    /* gap: 10px;  */
+    padding-bottom: 20px;
+}
+
+/* Individual case item with vertical divider inside the row */
+.case-item {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 16px;
+    position: relative; /* Required for spacing the divider */
+}
+
+/* Vertical divider */
+.case-item::after {
+    content: "";
+    position: absolute;
+    top: 12%; /* Adds space above */
+    bottom: 12%; /* Adds space below */
+    right: 0;
+    width: 1px;
+    background-color: #E0E3E5;
+}
+
+/* Remove right border from the last column in each row */
+.case-item:nth-child(4n)::after {
+    display: none; /* No divider on the last column of each row */
+}
+
+/* Add bottom border only to last row */
+.case-row:last-child {
+    border-bottom: none;
+}
+
+.label {
+    font-family: IBM Plex Sans;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0%;
+    color: #606E74;
+
+
+}
+
+.value-bold {
+    width: 232px;
+    height: 20px;
+    /* font-family: IBM Plex Sans;  */
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    color: #1A262B;
+
+    
+}
+
+/* .bold {
+    font-weight: 600;
+} */
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .case-row {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on tablets */
+    }
+
+    .case-item:nth-child(2n)::after {
+        display: none; /* Remove border for last item in row */
+    }
+}
+
+@media (max-width: 768px) {
+    .case-row {
+        grid-template-columns: repeat(1, 1fr); /* One column on mobile */
+    }
+
+    .case-item::after {
+        display: none; /* No vertical dividers on mobile */
+    }
+}

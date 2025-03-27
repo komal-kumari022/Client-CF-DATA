@@ -1,0 +1,347 @@
+/* Table Container */
+.table-container {
+  width: 95%;
+  max-width: 100%;
+  padding: 16px;
+  background: #ffffff;
+  border-radius: 8px;
+  margin-left: 16px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.tabs-container {
+  display: flex;
+  border-radius: 6px;
+  border-width: 1px;
+  margin-right: 10px;
+  overflow: hidden; 
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 101px;
+  height: 32px;
+  border-right-width: 1px;
+  padding: 6px 12px;
+  border: 1px solid #E0E3E5;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background-color: #ffffff;
+}
+
+/* Apply border-radius to first and last tab */
+.tab:first-child {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+.tab:last-child {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border-right-width: 0;
+}
+
+
+/* Filters and Tabs */
+.filters-tabs {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+  font-family: IBM Plex Sans;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  color: #1a262b;
+}
+
+.thead {
+  width: 35px;
+  height: 20px;
+  font-family: IBM Plex Sans;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0%;
+  color: #606e74;
+  background-color: #ffffff;
+  border-right: 1px solid #e0e3e5;
+}
+.tableCaseno{
+/* font-family: IBM Plex Sans;  */
+font-weight: 500;
+font-size: 14px;
+line-height: 20px;
+letter-spacing: 0%;
+color: #1A262B;
+
+}
+
+td.tableData{
+font-family: IBM Plex Sans;
+font-weight: 500;
+font-size: 14px;
+line-height: 20px;
+letter-spacing: 0%;
+color: #796BCC !important;
+
+}
+
+.filters
+.tabs {
+  display: flex;
+  gap: 8px;
+  border: none;
+}
+
+.filters button{
+  font-family: IBM Plex Sans;
+  font-weight: 500;
+  font-size: 14px;
+  margin-top: 30px;
+  /* line-height: 20px; */
+  letter-spacing: 0%;
+  color: #1a262b;
+  border: none;
+  background-color: #ffffff;
+}
+
+.tabs button {
+  margin-bottom: 52px;
+  font-family: IBM Plex Sans;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0%;
+  color: #1a262b;
+}
+
+
+/* .filters button.active,
+.tabs button.active {
+  background: #007bff;
+  color: #F1F0F9;
+
+} */
+.prev-btn {
+  margin-left: 48px;
+  width: 100;
+height: 32;
+border-radius: 6px;
+justify-content: space-between;
+padding-right: 8px;
+padding-left: 8px;
+border-width: 1px;
+color: #606E74;
+background-color: #FFFFFF !important;
+
+}
+
+.next-btn{
+width: 100;
+height: 32;
+border-radius: 6px;
+justify-content: space-between;
+padding-right: 8px;
+padding-left: 8px;
+border-width: 1px;
+color: #606E74;
+background-color: #FFFFFF !important;
+}
+
+/* Table with Scrollbar */
+.table-wrapper {
+  overflow-x: auto;
+  max-height: 400px;
+  border-radius: 8px;
+  border: 1px solid #e0e3e5;
+}
+
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  min-width: 600px;
+}
+
+.custom-table th,
+.custom-table td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  white-space: nowrap;
+}
+
+.custom-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+  border: 1px solid #e0e3e5;
+}
+
+.custom-table td {
+  font-size: 14px;
+  color: #333;
+  border: 1px solid #e0e3e5;
+}
+
+/* Scrollbar Styling */
+.table-wrapper::-webkit-scrollbar {
+  height: 8px;
+}
+
+.table-wrapper::-webkit-scrollbar-thumb {
+  background: #007bff;
+  border-radius: 8px;
+}
+
+.table-wrapper::-webkit-scrollbar-track {
+  background: #e0e0e0;
+}
+
+/* Status Styling */
+.disposed {
+  color: green;
+  font-weight: bold;
+}
+
+.pending {
+  color: red;
+  font-weight: bold;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between; /* Moves elements to opposite corners */
+  align-items: center;
+  padding: 10px;
+  background: #f8f8f8;
+  border-radius: 8px;
+}
+
+.pagination-info {
+  font-family: IBM Plex Sans;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0%;
+  color: #606E74;
+  
+}
+
+.pagination-buttons {
+  display: flex;
+  gap: 10px; /* Adds space between buttons */
+}
+
+.prev-btn,
+.pagination-buttons button {
+  border: 1px solid #E0E3E5;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+
+  font-family: IBM Plex Sans;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0%;
+  text-align: center;
+  background-color: #ffffff;
+  color: #606E74;
+
+}
+
+
+
+/* Responsive Styles */
+@media screen and (max-width: 1024px) {
+  .filters-tabs {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .filters,
+  .tabs {
+    flex-wrap: wrap;
+  }
+
+  .tabs-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-right: 0;
+  }
+
+  .custom-table th,
+  .custom-table td {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .pagination {
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .pagination-buttons {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .filters,
+  .tabs {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .tabs-container {
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .tab {
+    width: 100%;
+    text-align: center;
+    min-width: unset;
+  }
+
+  .table-container {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .table-wrapper {
+    max-height: 300px;
+    overflow-x: auto;
+  }
+
+  .custom-table th,
+  .custom-table td {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .pagination {
+    flex-direction: column;
+    gap: 6px;
+    text-align: center;
+  }
+
+  .pagination-buttons {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .prev-btn,
+  .next-btn {
+    width: auto;
+  }
+}

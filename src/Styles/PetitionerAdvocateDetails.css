@@ -1,0 +1,56 @@
+.accordion-container {
+  border: 1px solid #e0e3e5;
+  margin-top: 16px;
+  border-radius: 50px;
+  max-width: 98%;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  cursor: pointer;
+  background-color: #ffffff;
+  color: #1a262b;
+  border-bottom: 1px solid #e0e3e5;
+  font-family: IBM Plex Sans;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+}
+
+.accordion-icon {
+  transition: transform 0.3s ease;
+}
+
+.accordion-icon.open {
+  transform: rotate(180deg);
+}
+
+.details-table {
+  width: 100%;
+  color: #606e74;
+  border-collapse: collapse;
+}
+.tableData-right {
+  color: #1a262b;
+}
+.details-table th,
+.details-table td {
+  border: 1px solid #e0e3e5;
+  padding: 10px;
+  text-align: left;
+}
+
+.details-table th {
+  background-color: #ffffff;
+  font-weight: 600;
+}
+
+.details-table .bold-text {
+  font-weight: 600;
+}
