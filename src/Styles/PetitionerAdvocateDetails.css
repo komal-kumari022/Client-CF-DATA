@@ -1,13 +1,13 @@
 .accordion-container {
   border: 1px solid #e0e3e5;
   margin-top: 16px; 
-  border-radius: 50px;
+  border-radius: 10px; /* Adjusted for smooth edges */
   max-width: 100%;
   background-color: #fff;
   overflow: hidden;
-  
 }
 
+/* Accordion Header - Using Flexbox */
 .accordion-header {
   display: flex;
   justify-content: space-between;
@@ -17,13 +17,23 @@
   background-color: #FFFFFF;
   color: #1a262b;
   border-bottom: 1px solid #e0e3e5;
-  font-family: IBM Plex Sans;
+  font-family: IBM Plex Sans, sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0%;
 }
+.accordion-name{
+  font-family: IBM Plex Sans;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+letter-spacing: 0%;
+color: #1A262B;
 
+}
+
+/* Icon Rotation */
 .accordion-icon {
   transition: transform 0.3s ease;
 }
@@ -32,17 +42,31 @@
   transform: rotate(180deg);
 }
 
+/* Responsive Table */
 .details-table {
   width: 100%;
   color: #606e74;
   border-collapse: collapse;
-  
+  display: flex;
+  flex-direction: column;
 }
-.tableData-right {
-  color: #1a262b;
+
+/* Table Header */
+.details-table thead {
+  display: flex;
+  flex-direction: column;
 }
+
+.details-table tr {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
 .details-table th,
 .details-table td {
+  flex: 1; /* Flex-grow to fill space */
+  min-width: 120px; /* Prevents text from shrinking too much */
   border: 1px solid #e0e3e5;
   padding: 10px;
   text-align: left;
@@ -53,29 +77,75 @@
   font-weight: 600;
 }
 
+/* Bold Text */
 .details-table .bold-text {
   font-weight: 600;
 }
 
-.accordion-body {
+/* Table Row */
+.tableData-right {
+  color: #1a262b;
   display: flex;
+  flex-wrap: wrap;
+}
+
+.accordion-body {
+  display: flex; /* Enables Flexbox */
+  align-items: center; /* Vertically centers items */
+  justify-content: space-between; /* Horizontally centers items */
+  /* gap: 8px;  */
+  height: 100%; /* Ensures it takes full height of parent */
+  width: 100%; /* Ensures it takes full width of parent */
   flex-direction: column;
-  align-items: center; /* Centers horizontally */
-  justify-content: center; /* Centers vertically */
-  width: 100%;
-  height: 200px; /* Adjust height based on needs */
-  text-align: center;
 }
 
+/* Optional: Adjust image size */
 .img-icon-right {
-  height: 70px;
-  width: 70px; /* Adjust size as needed */
-  height: auto;
-  margin-bottom: 2px; /* Space between icon and text */
+  display: flex;
+  align-items: center;
+  margin-top: 14px;
+  width: 44px;  /* Adjust as needed */
+  height: 44px; /* Adjust as needed */
 }
 
-.record-right {
-  font-size: 18px;
-  font-weight: 500;
-  color: #606E74;
+
+.details-table th:first-child,
+.details-table td:first-child {
+  flex: 0.2; /* Reduce the space it takes */
+  min-width: 50px; /* Set a smaller minimum width */
+  max-width: 60px; /* Prevent it from stretching too much */
+  text-align: center; /* Keep text centered */
+}
+
+
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+  .accordion-header {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .details-table th,
+  .details-table td {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .accordion-icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .details-table tr {
+    flex-direction: column; /* Stack items on smaller screens */
+  }
+
+  .details-table th,
+  .details-table td {
+    width: 100%; /* Full width for smaller screens */
+    text-align: center;
+  }
 }

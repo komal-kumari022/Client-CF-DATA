@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../Styles/PetitionerAdvocateDetails.css"; // Import CSS for styling
 import acordian from "../Images/accordian.png"
 
-const StandardAct = () => {
+const Acts = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   
@@ -10,7 +10,7 @@ const StandardAct = () => {
     <div className="accordion-container">
       {/* Accordion Header */}
       <div className="accordion-header" onClick={() => setIsOpen(!isOpen)}>
-        <h3>Standard Act</h3>
+        <h3>Acts</h3>
         {/* <span className={`accordion-icon ${isOpen ? "open" : ""}`}>&#9650;</span>  */}
         <img
           src={acordian}
@@ -25,13 +25,15 @@ const StandardAct = () => {
           <thead>
             <tr>
               <th>No</th>
-              <th>Act Name</th>
+              <th>Document Name</th>
+              <th>Section</th>
             </tr>
           </thead>
           <tbody>
             <tr className="tableData-right">
               <td>1</td>
               <td className="bold-text">Trade market act 1999</td>
+              <td>-</td>
             </tr>
           </tbody>
         </table>
@@ -40,4 +42,4 @@ const StandardAct = () => {
   );
 };
 
-export default StandardAct;
+export default Acts;

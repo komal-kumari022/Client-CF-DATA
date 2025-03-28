@@ -1,0 +1,149 @@
+.Order-accordion-container {
+    border: 1px solid #e0e3e5;
+    margin-top: 16px; 
+    border-radius: 10px; /* Adjusted for smooth edges */
+    max-width: 100%;
+    background-color: #fff;
+    overflow: hidden;
+  }
+  
+  /* Accordion Header - Using Flexbox */
+  .Order-accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    cursor: pointer;
+    background-color: #FFFFFF;
+    color: #1a262b;
+    border-bottom: 1px solid #e0e3e5;
+    font-family: IBM Plex Sans, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0%;
+  }
+  .Order-accordion-name{
+    font-family: IBM Plex Sans;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  color: #1A262B;
+  
+  }
+  
+  /* Icon Rotation */
+  .Order-accordion-icon {
+    transition: transform 0.3s ease;
+  }
+  
+  .Order-accordion-icon.open {
+    transform: rotate(180deg);
+  }
+  
+  /* Responsive Table */
+  .Order-details-table {
+    width: 100%;
+    color: #606e74;
+    border-collapse: collapse;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Table Header */
+  .Order-details-table thead {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .Order-details-table tr {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  .Order-details-table th,
+  .Order-details-table td {
+    flex: 1; /* Flex-grow to fill space */
+    min-width: 120px; /* Prevents text from shrinking too much */
+    border: 1px solid #e0e3e5;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .Order-details-table th {
+    background-color: #ffffff;
+    font-weight: 600;
+  }
+  
+  /* Bold Text */
+  .details-table .bold-text {
+    font-weight: 600;
+  }
+  
+  /* Table Row */
+  .Order-tableData-right {
+    color: #1a262b;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+
+  
+  .download-icon-rightside {
+    display: flex;
+    justify-content: center;  /* Centers horizontally */
+    align-items: center;      /* Centers vertically */
+              /* Ensures it takes full height of the cell */
+  }
+  
+  .Order-details-table th:first-child,
+  .Order-details-table td:first-child {
+    flex: 0.2; /* Reduce the space it takes */
+    min-width: 50px; /* Set a smaller minimum width */
+    max-width: 60px; /* Prevent it from stretching too much */
+    text-align: center; /* Keep text centered */
+  }
+  
+  .Order-details-table th:last-child,
+  .Order-details-table td:last-child {
+    flex: 0.2; /* Reduce the space it takes */
+    min-width: 50px; /* Set a smaller minimum width */
+    max-width: 60px; /* Prevent it from stretching too much */
+    text-align: center; /* Keep text centered */
+  }
+  
+  
+  
+  /* Responsive Design for Small Screens */
+  @media (max-width: 768px) {
+    .Order-accordion-header {
+      font-size: 14px;
+      padding: 10px;
+    }
+  
+    .Order-details-table th,
+    .Order-details-table td {
+      padding: 8px;
+      font-size: 14px;
+    }
+  
+    .Order-accordion-icon {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .Order-details-table tr {
+      flex-direction: column; /* Stack items on smaller screens */
+    }
+  
+    .Order-details-table th,
+    .Order-details-table td {
+      width: 100%; /* Full width for smaller screens */
+      text-align: center;
+    }
+  }
+  

@@ -11,6 +11,14 @@ import RiskSummary from "./RiskSummary";
 import ApplicationDetails from "./ApplicationDetails";
 import StandardAct from "./StandardAct";
 import FIRDetails from "./FIRDetails";
+import Acts from "./Acts";
+import SubordinateCourtInformation from "./SubordinateCourtInformation";
+import HistoryCaseHearing from "./HistoryCaseHearing";
+import MatterMainInformation from "./MatterMainInformation";
+import Order from "./Order";
+import PDFDocuments from "./PDFDocuments";
+import CaseTransferDetails from "./CaseTransferDetails";
+import LinkedCases from "./LinkedCases";
 
 
 const RightSidebar = ({ caseData, onClose }) => {
@@ -49,6 +57,14 @@ const RightSidebar = ({ caseData, onClose }) => {
         <ApplicationDetails/>
         <StandardAct/> 
         <FIRDetails/>
+        <Acts/>
+        <SubordinateCourtInformation/>
+        <HistoryCaseHearing/>
+        <MatterMainInformation/>
+        <Order/>
+        <PDFDocuments/>
+        <CaseTransferDetails/>
+        <LinkedCases/>
       </div>
     </div>
   );

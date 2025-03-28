@@ -1,16 +1,21 @@
 import React, { useState } from "react";
 import "../Styles/PetitionerAdvocateDetails.css"; // Import CSS for styling
-import acordian from "../Images/accordian.png"
+import acordian from "../Images/accordian.png";
+import { useLocation } from "react-router-dom"; 
 
 const PetitionerAdvocateDetails = () => {
+  const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
-
+  const searchData = location.state?.searchData || {}; // Get API response data
+  const lstCases = searchData.lstCases || []; // Extract cases from API response
   
+
+  let rowIndex = 0;
   return (
     <div className="accordion-container">
       {/* Accordion Header */}
       <div className="accordion-header" onClick={() => setIsOpen(!isOpen)}>
-        <h3>Petitioner and Advocate Details</h3>
+        <h3 className="accordian-name">Petitioner and Advocate Details</h3>
         {/* <span className={`accordion-icon ${isOpen ? "open" : ""}`}>&#9650;</span>  */}
         <img
           src={acordian}
@@ -32,13 +37,20 @@ const PetitionerAdvocateDetails = () => {
             </tr>
           </thead>
           <tbody>
-            <tr className="tableData-right">
-              <td>1</td>
-              <td className="bold-text">Suvarnakalpvt.ltd.</td>
-              <td>Ramesh Patel</td>
-              <td>-</td>
-              <td>-</td>
-            </tr>
+            {lstCases.flatMap((caseItem) =>
+              caseItem.lstPetitioner?.map((petitioner) => {
+                rowIndex++; // Increment the row number
+                return (
+                  <tr className="tableData-right" key={rowIndex}>
+                    <td>{rowIndex}</td>
+                    <td className="bold-text">{petitioner.petitionername || "-"}</td>
+                    <td>{petitioner.petitioneradvocate || "-"}</td>
+                    <td>{petitioner.petitioner_address || "-"}</td>
+                    <td>{petitioner.petitioner_other || "-"}</td>
+                  </tr>
+                );
+              })
+            )}
           </tbody>
         </table>
       )}

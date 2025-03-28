@@ -1,3 +1,5 @@
+
+/* Right Sidebar */
 .right-sidebar {
     position: fixed;
     top: 0;
@@ -7,36 +9,19 @@
     max-height: 100vh;
     max-width: 100vw;
     background-color: #f4f5f7;
-    overflow-x: hidden;
-    overflow-y: auto;
-    scrollbar-width: thin;
-    scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+    /* overflow-y: auto;  */
     display: flex;
-    flex-direction: column; /* Ensures proper layout */
+    flex-direction: column;
 }
-  
-  /* .close-btn {
-    background: red;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    float: right;
-  } */
-  
-  .clickable {
-    color: blue;
-    cursor: pointer;
-    text-decoration: underline;
-  }
-  
-  .rightsidebar-main {
-    position: sticky; 
+
+/* Sidebar Header */
+.rightsidebar-main {
+    position: sticky;
     top: 0;
     left: 0;
-    width: 100%; 
+    width: 100%;
     background-color: #ffffff;
-    padding: 16px 24px;
+    padding: 12px 16px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -44,13 +29,15 @@
     z-index: 10; 
 }
 
+/* Sidebar Title & Details */
 .rightsidebar-main2 {
     display: flex;
     align-items: center;
-    gap: 12px; 
-    flex-wrap: wrap; 
+    gap: 8px;
+    flex-wrap: wrap; /* Ensures it wraps on smaller screens */
 }
 
+/* Sidebar Title */
 .caseDetail {
     font-family: "IBM Plex Sans", sans-serif;
     font-weight: 600;
@@ -59,13 +46,15 @@
     margin: 0;
 }
 
+/* Separator */
 .rect-sidebar {
     width: 1px;
     height: 24px;
     background-color: #D9D9D9;
 }
 
-.sidebar-district{
+/* Sidebar Labels */
+.sidebar-district {
     font-family: "IBM Plex Sans", sans-serif;
     font-size: 14px;
     color: #606E74;
@@ -73,28 +62,30 @@
 }
 
 .sidebar-code {
-    font-family: IBM Plex Sans;
+    font-family: "IBM Plex Sans", sans-serif;
     font-weight: 500;
     font-size: 12px;
-    line-height: 16px;
-    letter-spacing: 0%;
-    
+    background: #F0F1F3;
+    padding: 4px 8px;
+    border-radius: 4px;
 }
+
 .sidebar-disposed {
-    font-family: IBM Plex Sans;
+    font-family: "IBM Plex Sans", sans-serif;
     font-weight: 500;
-    font-size: 16px;
-    line-height: 16px;
-    letter-spacing: 0%;    
+    font-size: 14px;
     color: #52AB76;
-
+    background: #EAF8EF;
+    padding: 4px 8px;
+    border-radius: 4px;
 }
 
+/* Sidebar Buttons */
 .corner-sidebar {
-    margin-left: 200px; 
     display: flex;
-    gap: 12px;
+    gap: 8px;
     align-items: center;
+    margin-left: 92px;
 }
 
 .corner-btns, .corner-btns2 {
@@ -102,30 +93,65 @@
     font-family: "IBM Plex Sans", sans-serif;
     font-weight: 500;
     font-size: 14px;
-    line-height: 20px;
-    letter-spacing: 0%;
     text-align: center;
     background-color: #FFFFFF;
     border: 1px solid #E0E3E5;
     display: flex;
     align-items: center;
-    gap: 8px; 
+    gap: 8px;
     padding: 8px 16px;
-    border-radius: 4px; 
+    border-radius: 4px;
     cursor: pointer;
 }
 
 .corner-btns img, .corner-btns2 img {
-    width: 16px; 
+    width: 16px;
     height: 16px;
     object-fit: contain;
 }
 
-
-.sidebar-content{
-    background-color: #f4f5f7; 
+/* Sidebar Content */
+.sidebar-content {
+    background-color: #f4f5f7;
     padding: 20px;
-    flex-grow: 1;  
+    flex-grow: 1;
     overflow-y: auto; 
+    overflow-x: hidden;
     padding-bottom: 100px;
+}
+
+/* 🔹 RESPONSIVENESS 🔹 */
+@media (max-width: 1024px) {
+    .right-sidebar {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .right-sidebar {
+        width: 100%;
+    }
+
+    .rightsidebar-main {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .corner-sidebar {
+        width: 100%;
+        justify-content: flex-end;
+        margin-top: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .rightsidebar-main2 {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .corner-sidebar {
+        width: 100%;
+        justify-content: space-between;
+    }
 }

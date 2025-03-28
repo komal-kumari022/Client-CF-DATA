@@ -1,0 +1,139 @@
+.history-accordion-container {
+    border: 1px solid #e0e3e5;
+    margin-top: 16px; 
+    border-radius: 10px; /* Adjusted for smooth edges */
+    max-width: 100%;
+    background-color: #fff;
+    overflow: hidden;
+  }
+  
+  /* Accordion Header - Using Flexbox */
+  .history-accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    cursor: pointer;
+    background-color: #FFFFFF;
+    color: #1a262b;
+    border-bottom: 1px solid #e0e3e5;
+    font-family: IBM Plex Sans, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px; 
+    letter-spacing: 0%;
+  }
+  .history-accordion-name{
+    font-family: IBM Plex Sans;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  color: #1A262B;
+  
+  }
+  
+  /* Icon Rotation */
+  .history-accordion-icon {
+    transition: transform 0.3s ease;
+  }
+  
+  .history-accordion-icon.open {
+    transform: rotate(180deg);
+  }
+  
+  /* Responsive Table */
+  .history-details-table {
+    width: 100%;
+    color: #606e74;
+    /* table-layout: fixed; */
+    border-collapse: collapse;
+    display: table;
+    flex-direction: column;
+  }
+  
+  /* Table Header */
+  .history-details-table thead {
+    display: table-header-group;
+    flex-direction: column;
+  }
+  
+  .history-details-table tr {
+    display: table-row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  .history-details-table th,
+  .history-details-table td {
+    /* flex: 1;  */
+    display: table-cell;
+    /* min-width: 100px;  */
+    border: 1px solid #e0e3e5;
+    padding: 8px;
+    text-align: left;
+    white-space: nowrap;
+  }
+  
+  .history-details-table th {
+    background-color: #ffffff;
+    font-weight: 600;
+    font-size: 14px;
+  }
+  
+  /* Bold Text */
+  .history-details-table .bold-text {
+    font-weight: 600;
+  }
+  
+  /* Table Row */
+  .history-tableData-right {
+    color: #1a262b;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+
+  
+  /* Responsive Design for Small Screens */
+  @media (max-width: 768px) {
+    .history-accordion-header {
+      font-size: 14px;
+      padding: 10px;
+    }
+  
+    .history-details-table th,
+    .history-details-table td {
+      padding: 8px;
+      font-size: 14px;
+    }
+  
+    .history-accordion-icon {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  .history-details-table th:first-child, 
+.history-details-table td:first-child {
+    width: 5%; /* Makes the "No" column smaller */
+    min-width: 40px; /* Prevents it from shrinking too much */
+    text-align: center;
+}
+
+.history-details-table th:not(:first-child), 
+.history-details-table td:not(:first-child) {
+    width: auto; /* Distributes remaining space equally */
+}
+  
+  @media (max-width: 480px) {
+    .history-details-table tr {
+      flex-direction: column; /* Stack items on smaller screens */
+    }
+  
+    .history-details-table th,
+    .history-details-table td {
+      width: 100%; /* Full width for smaller screens */
+      text-align: center;
+    }
+  }
+  
