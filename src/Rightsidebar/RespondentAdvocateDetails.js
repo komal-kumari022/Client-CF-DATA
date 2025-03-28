@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "../Styles/PetitionerAdvocateDetails.css"; // Import CSS for styling
-
+import "../Styles/PetitionerAdvocateDetails.css"; // FOR THIS PAGE WE ARE USING PETITIONER CSS ONLY
+import acordian from "../Images/accordian.png";
 const RespondentAdvocateDetails = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -9,7 +9,12 @@ const RespondentAdvocateDetails = () => {
       {/* Accordion Header */}
       <div className="accordion-header" onClick={() => setIsOpen(!isOpen)}>
         <h3>Respondent and Advocate Details</h3>
-        <span className={`accordion-icon ${isOpen ? "open" : ""}`}>&#9650;</span>
+        {/* <span className={`accordion-icon ${isOpen ? "open" : ""}`}>&#9650;</span> */}
+        <img
+          src={acordian}
+          alt="Accordion Icon"
+          className={`accordion-icon ${isOpen ? "open" : ""}`}
+        />
       </div>
 
       {/* Accordion Body (Table) */}

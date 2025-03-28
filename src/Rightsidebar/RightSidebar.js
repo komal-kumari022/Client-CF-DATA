@@ -6,6 +6,12 @@ import close from "../Images/Close.png";
 import PetitionerAdvocateDetails from "./PetitionerAdvocateDetails";
 import RespondentAdvocateDetails from "./RespondentAdvocateDetails";
 import CaseDetails from "./CaseDetails";
+import CaseStatus from "./CaseStatus";
+import RiskSummary from "./RiskSummary";
+import ApplicationDetails from "./ApplicationDetails";
+import StandardAct from "./StandardAct";
+import FIRDetails from "./FIRDetails";
+
 
 const RightSidebar = ({ caseData, onClose }) => {
   if (!caseData) return null;
@@ -38,6 +44,11 @@ const RightSidebar = ({ caseData, onClose }) => {
         <PetitionerAdvocateDetails />
         <RespondentAdvocateDetails/> 
         <CaseDetails/>
+        <CaseStatus/>
+        <RiskSummary/>
+        <ApplicationDetails/>
+        <StandardAct/> 
+        <FIRDetails/>
       </div>
     </div>
   );

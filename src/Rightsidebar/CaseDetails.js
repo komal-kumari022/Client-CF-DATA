@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "../Styles/CaseDetails.css"; // Import CSS for styling
+import acordian from "../Images/accordian.png"
+
 
 const CaseDetails = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,7 +11,12 @@ const CaseDetails = () => {
       {/* Accordion Header */}
       <div className="accordion-header" onClick={() => setIsOpen(!isOpen)}>
         <h3>Case Details</h3>
-        <span className={`accordion-icon ${isOpen ? "open" : ""}`}>&#9650;</span>
+        {/* <span className={`accordion-icon ${isOpen ? "open" : ""}`}>&#9650;</span> */}
+        <img
+          src={acordian}
+          alt="Accordion Icon"
+          className={`accordion-icon ${isOpen ? "open" : ""}`}
+        />
       </div>
 
       {/* Accordion Body */}

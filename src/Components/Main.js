@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useCallback, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../Styles/Main.css";
 import axios from "axios";
@@ -17,7 +17,8 @@ const Main = () => {
 
  
 
-  async function fetchRecentSearches() {
+
+  const fetchRecentSearches = useCallback(async () => {
     try {
       const token = localStorage.getItem("access_token");
       if (!token) return;
@@ -35,11 +36,12 @@ const Main = () => {
     } catch (error) {
       console.error("Error fetching recent searches:", error);
     }
-  }
+  }, [API_URL]); // ✅ Add API_URL as dependency
 
+  // ✅ Call fetchRecentSearches inside useEffect
   useEffect(() => {
     fetchRecentSearches();
-  },);
+  }, [fetchRecentSearches]); // ✅ Correct dependency
 
 
   async function handleSearch() {
